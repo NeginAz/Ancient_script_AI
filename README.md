@@ -87,6 +87,21 @@ The CuneiformProcessor class includes:
 
 ## File Structure
 
+```
+project/
+├── training.ipynb        # Notebook for training the neural network
+├── app/                  # Application folder
+│   ├── main.py           # Streamlit application script
+│   ├── preprocessing.py  # Preprocessing and prediction logic
+├── datasets/             # Folder containing dataset files
+│   ├── train_small.zip   # Training data
+│   ├── test_small.zip    # Testing data
+│   ├── final_test_small  # Final testing data
+├── models/               # Folder for storing trained models
+│   ├── saved_model/      # Trained TensorFlow model
+
+```
+
 ## Usage
 
 ### 1. Training the Model
