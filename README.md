@@ -1,16 +1,33 @@
 # Cuneiform Translation System
-
 This project involves the design and implementation of a system to translate ancient Persian cuneiform text into modern Persian using image processing and machine learning. The system comprises two major components: a neural network for classifying cuneiform letters and a Streamlit-based application for user interaction.
 
 ## Overview
 
-The primary objective of this project is to leverage machine learning and computer vision techniques to create an automated tool for recognizing and translating cuneiform characters.
+### Objective
+Cuneiform script is an ancient writing method used for languages such as Old Persian, Sumerian, and Babylonian. The script consists of 37 characters and is associated with inscriptions from the Achaemenid period. Due to the limited number of experts in ancient languages and the historical importance of these writings, this research focuses on automating the reading and translation of ancient texts.
 
+The primary objective of this project is to leverage machine learning and computer vision techniques to create an automated tool for recognizing and translating cuneiform characters.
 ## Components
 
 - 1. Training System: A neural network model trained to classify cuneiform characters.
 
 - 2. Application: A Streamlit-based application that preprocesses input images, performs character recognition, and displays results.
+
+
+## Methods: 
+ - Collected and preprocessed a dataset of ancient Persian cuneiform characters from historical inscriptions using image processing tools like OpenCV for noise reduction and thresholding.
+
+- xtracted character images from inscriptions using template matching algorithms to locate and segment symbols from the background accurately.
+
+- Applied data augmentation techniques (rotation, scaling, translation) using OpenCV to increase dataset size and improve model generalization.
+
+- Generated synthetic data with Autoencoders to create variations of existing characters, enhancing the dataset and mitigating class imbalance.
+
+- Designed and implemented Convolutional Neural Networks (CNN) using TensorFlow/Keras to classify cuneiform characters, optimizing architecture for image recognition tasks.
+
+- Evaluated model performance using metrics such as accuracy, confusion matrices, and loss curves to refine models and identify areas for improvement.
+
+- Developed a complete translation pipeline that integrated character detection and classification to convert ancient Persian cuneiform into modern Persian text.
 
 
 ## Training the Neural Network
