@@ -114,7 +114,7 @@ project/
 │   ├── train_small.zip   # Training data
 │   ├── test_small.zip    # Testing data
 │   ├── final_test_small.zip  # testing data
-├── models/               # Folder for storing trained models
+├── model/               # Folder for storing trained models
 │   ├── saved_model/      # Trained TensorFlow model
 ├── test_script           # example file for testing 
 │   ├── image.JPG  
