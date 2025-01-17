@@ -9,7 +9,7 @@ class CuneiformProcessor:
         dirname = os.path.dirname(__file__)
         #model_path = os.path.join(dirname, 'model')
         main_dir = os.path.abspath(os.path.join(dirname, '..', '..'))
-        model_path = os.path.join(main_dir, 'last_model')
+        model_path = os.path.join(main_dir, 'model')
         loaded = tf.saved_model.load(model_path)
         self.model = loaded.signatures['serving_default']
         print("Model loaded successfully.")
