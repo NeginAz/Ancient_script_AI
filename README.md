@@ -8,9 +8,9 @@ The primary objective of this project is to leverage machine learning and comput
 
 ## Components
 
-- 1.Training System: A neural network model trained to classify cuneiform characters.
+- 1. Training System: A neural network model trained to classify cuneiform characters.
 
-- 2.Application: A Streamlit-based application that preprocesses input images, performs character recognition, and displays results.
+- 2. Application: A Streamlit-based application that preprocesses input images, performs character recognition, and displays results.
 
 
 ## Training the Neural Network
@@ -96,10 +96,11 @@ project/
 ├── datasets/             # Folder containing dataset files
 │   ├── train_small.zip   # Training data
 │   ├── test_small.zip    # Testing data
-│   ├── final_test_small  # Final testing data
+│   ├── final_test_small.zip  # testing data
 ├── models/               # Folder for storing trained models
 │   ├── saved_model/      # Trained TensorFlow model
-
+├── test_script           # example file for testing 
+│   ├── image.JPG  
 ```
 
 ## Usage
@@ -124,11 +125,12 @@ Save the trained model in the models/saved_model/ directory.
   streamlit run main.py
   ```
 - Upload an image and view the processed output.
+  
+  <img width="1512" alt="app" src="https://github.com/user-attachments/assets/414a06a2-4898-4ae8-9c95-384cf8edce4f" />
 
 ### 3. Dataset Preparation
 
 - If datasets are not included, download and place them in the datasets/ folder. Update paths in the training notebook accordingly.
-
 
 
 ## Future Work
