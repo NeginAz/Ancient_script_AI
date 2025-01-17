@@ -17,7 +17,7 @@ The primary objective of this project is to leverage machine learning and comput
 ## Methods: 
  - Collected and preprocessed a dataset of ancient Persian cuneiform characters from historical inscriptions using image processing tools like OpenCV for noise reduction and thresholding.
 
-- xtracted character images from inscriptions using template matching algorithms to locate and segment symbols from the background accurately.
+- extracted character images from inscriptions using template matching algorithms to locate and segment symbols from the background accurately.
 
 - Applied data augmentation techniques (rotation, scaling, translation) using OpenCV to increase dataset size and improve model generalization.
 
