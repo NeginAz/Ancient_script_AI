@@ -19,11 +19,11 @@ if uploaded_file is not None:
     image = cv2.imdecode(file_bytes, 1)
     
     # Show the original image
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image", use_container_width=True)
 
     # Preprocess the image using your custom function
     processed_image = processor.predict(image)
 
     # Show the processed image
-    st.image(processed_image, caption="Processed Image", use_column_width=True)
+    st.image(processed_image, caption="Processed Image", use_container_width=True)
 

@@ -7,7 +7,9 @@ from tensorflow.keras.models import load_model
 class CuneiformProcessor:
     def __init__(self):
         dirname = os.path.dirname(__file__)
-        model_path = os.path.join(dirname, 'saved_model_2')
+        #model_path = os.path.join(dirname, 'model')
+        main_dir = os.path.abspath(os.path.join(dirname, '..', '..'))
+        model_path = os.path.join(main_dir, 'last_model')
         loaded = tf.saved_model.load(model_path)
         self.model = loaded.signatures['serving_default']
         print("Model loaded successfully.")
@@ -89,7 +91,9 @@ class CuneiformProcessor:
                 
                 # Extract the prediction result
                 prediction = predictions['output_0']  # Adjust the key based on your model's output layer name
-                label_index = np.argmax(prediction) if np.max(prediction) > 0.7 else None
+                label_index = np.argmax(prediction) 
+                #if np.max(prediction) 
+                #> 0.7 else None
                 if(label_index >= 0  and label_index < 37 and len(contour) > 10):
                     cv2.putText(image, self.letters[label_index], (x - 2 , y - 3 ), self.font, 0.4, (255, 0, 0), 1, cv2.LINE_AA)
                     cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
@@ -98,25 +102,3 @@ class CuneiformProcessor:
         processed_image = self.process_image(image_array)
         return processed_image
 
-
-#Usage Example:
-# processor = CuneiformProcessor()
-# image = cv2.imread('73.JPG')
-# cv2.imshow('original' , image )
-
-# # Create a Gaussian Filter
-# filter_size = 3
-# filter_sigma = 2
-# filter = cv2.getGaussianKernel(filter_size, filter_sigma)
-# filter = filter * filter.T
-
-# # Apply it to remove noise
-# blur = cv2.fastNlMeansDenoisingColored(image, 3.0, 7, 21)
-
-# cv2.imshow("denoised" , blur)
-# cv2.waitKey(0)
-
-# output_image = processor.predict(blur)
-# cv2.imshow('Output', output_image)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows() 
